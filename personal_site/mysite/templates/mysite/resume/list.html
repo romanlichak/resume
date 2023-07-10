@@ -1,0 +1,16 @@
+{% extends "mysite/base.html" %}
+{% block title %}Резюме{% endblock %}
+{% block content %}
+<h1>Резюме Личака Романа Анатольевича</h1>
+{% for exp1 in exp %}
+<h1>
+<a href="{% url 'mysite:resume_detail' exp1.id %}">
+{{ exp1.role|truncatewords:30|linebreaks }}
+ дата приема на работу:
+ {{ exp1.data_start|date:"F.Y"  }}<br> дата уволнения: {{ exp1.data_end|date:"F.Y"   }}
+</a>
+</h1>
+
+
+{% endfor %}
+{% endblock %}

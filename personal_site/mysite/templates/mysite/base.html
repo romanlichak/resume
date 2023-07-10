@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <link href="{% static "css/style1.css" %}" rel="stylesheet"/>
+
+
+<!--  <script src="{% static "js/init.js" %}"></script>-->
+</head>
+<body>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <div id="sidebar">
+    <h2>Мои котнтакты</h2>
+    <p>моб. 8 (916) 652-30-36<br>
+       mail: lichak-roman@mail.ru
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{% extends "mysite/base.html" %}
+{% block title %}{{ exp.role }}{% endblock %}
+{% block content %}
+<h2><strong> {{ exp.company }}</strong><br>
+{{ exp.data_start }}
+{{ exp.data_end }}
+{{ exp.tasks|linebreaks  }}</h2>
+{% endblock %}
